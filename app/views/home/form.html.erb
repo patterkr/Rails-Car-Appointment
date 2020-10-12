@@ -1,0 +1,45 @@
+<h1>Appointment Form</h1>
+<p>
+	<%= form_tag '/appointment' do%>
+		<p>
+			Please re-enter your Email
+			<%= label_tag :email, "Email:" %>
+  			<%= email_field_tag :email, '', required: true %>
+		</p>
+		<p>
+			<%= label_tag :fname, "First Name:" %>
+  			<%= text_field_tag :fname, '', required: true %>
+  		</p>
+  		<p>
+	  		<%= label_tag :lname, "Last Name:" %>
+	  		<%= text_field_tag :lname, '', required: true %>
+  		</p>
+  		<p>
+			<%= label_tag :phonenum, "Phone Number:" %>
+  			<%= number_field_tag :phonenum, {}, required: true %>
+  		</p>
+  		<p>
+	  		<%= label_tag :caryear, "Year:" %>
+	  		<%= number_field_tag :caryear, {}, min: 1886, max: 2020, required: true %>
+  		</p>
+  		<p>
+			<%= label_tag :carmake, "Make:" %>
+  			<%= text_field_tag :carmake, '', required: true %>
+  		</p>
+  		<p>
+	  		<%= label_tag :carmodel, "Model:" %>
+	  		<%= text_field_tag :carmodel, '', required: true %>
+  		</p>
+  		<p>
+  			<%# Will expand box since entry is text not string if time allows%>
+			<%= label_tag :repairs, "Repair Required:" %>
+  			<%= text_field_tag :repairs, '', required: true %>
+  		</p>
+  		<p>
+  			<%# Will look into Bootstrap date and time chooser if time allows%>
+			<%= label_tag :appt, "Prefered Date and Time:" %>
+			<%= text_field_tag :appt, '', required: true %>
+  		</p>
+  		<%= submit_tag "submit",:value => "submit"%>
+	<%end%>
+</p>

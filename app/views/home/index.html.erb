@@ -1,0 +1,10 @@
+<body>
+	<h1>Application for an Appointment</h1>
+	<p>
+		Please enter your email below and we will send a link that leads to an appointment application:
+		<%= form_tag '/email' do%>
+			Email : </br><%= email_field_tag :email, '', required: true %></br>
+			<%= submit_tag "submit",:value => "submit"%>
+		<%end%>
+	</p>
+</body>

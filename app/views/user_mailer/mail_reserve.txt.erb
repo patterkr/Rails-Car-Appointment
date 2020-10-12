@@ -1,0 +1,12 @@
+Someone has reserved an appointment
+	<%= @user.fname %> <%= @user.lname %> has made a reservation for <%= @user.appt %>.
+
+	They need work done on their <%= @user.caryear %> <%= @user.carmake %> <%= @user.carmodel %> stating: "<%= @user.repairs %>"
+
+	Their contact information is listed below:
+	Phone:
+	<%= @user.phonenum %>
+	Email:
+	<%= @user.email %>
+	IP:
+	<%= @user.ip %>

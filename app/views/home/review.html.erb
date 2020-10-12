@@ -1,0 +1,16 @@
+<h1>Review Appointment</h1>
+<p>
+	Hello <%= @user.fname %> <%= @user.lname %>. Your appointment is already scheduled for <%= @user.appt %>.<br>
+	<br>
+	We will be working on a <%= @user.caryear %> <%= @user.carmake %> <%= @user.carmodel %> and will perform the requested repairs:<br>
+	"<%= @user.repairs %>"<br>
+	<br>
+	If we have any issues we will contact you at:<br>
+	<%= @user.phonenum %><br>
+	<br>
+	If you are satisfied with our services please leave a rating between 1-5 below:<br>
+	<%= form_tag '/rate' do%>
+			Rating : </br><%= number_field_tag :rating, {}, min: 1, max: 5, required: true %></br>
+			<%= submit_tag "submit",:value => "submit"%>
+	<%end%>
+</p>

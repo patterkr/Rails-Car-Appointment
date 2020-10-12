@@ -1,0 +1,14 @@
+<h1> Someone has reserved an appointment </h1>
+<p>
+<%= @user.fname %> <%= @user.lname %> has made a reservation for <%= @user.appt %>.<br>
+<br> 
+They need work done on their <%= @user.caryear %> <%= @user.carmake %> <%= @user.carmodel %> stating: "<%= @user.repairs %>"<br>
+<br>
+Their contact information is listed below:<br>
+Phone:<br>
+<%= @user.phonenum %><br>
+Email:<br>
+<%= @user.email %><br>
+IP:<br>
+<%= @user.ip %>
+</p>

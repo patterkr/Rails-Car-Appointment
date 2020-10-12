@@ -1,0 +1,67 @@
+<%= form_with(model: user, local: true) do |form| %>
+  <% if user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(user.errors.count, "error") %> prohibited this user from being saved:</h2>
+
+      <ul>
+        <% user.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :email %>
+    <%= form.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= form.label :fname %>
+    <%= form.text_field :fname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :lname %>
+    <%= form.text_field :lname %>
+  </div>
+
+  <div class="field">
+    <%= form.label :phonenum %>
+    <%= form.number_field :phonenum %>
+  </div>
+
+  <div class="field">
+    <%= form.label :caryear %>
+    <%= form.number_field :caryear %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carmake %>
+    <%= form.text_field :carmake %>
+  </div>
+
+  <div class="field">
+    <%= form.label :carmodel %>
+    <%= form.text_field :carmodel %>
+  </div>
+
+  <div class="field">
+    <%= form.label :repairs %>
+    <%= form.text_area :repairs %>
+  </div>
+
+  <div class="field">
+    <%= form.label :appt %>
+    <%= form.text_field :appt %>
+  </div>
+
+  <div class="field">
+    <%= form.label :ip %>
+    <%= form.text_field :ip %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
